@@ -15,7 +15,8 @@ import subprocess
 import numpy as np
 import os
 from os.path import join as pjoin
-
+os.environ["CC"] = "g++-5"
+os.environ["CXX"] = "g++-5"
 
 def find_in_path(name, path):
     "Find a file in a search path"
