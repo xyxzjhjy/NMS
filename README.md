@@ -12,9 +12,9 @@ thresh=0.8, time wastes:0.1038
 thresh=0.9, time wastes:0.4184
 
 method 3:
-thresh=0.7, time wastes:0.0019
-thresh=0.8, time wastes:0.0028
-thresh=0.9, time wastes:0.0036
+thresh=0.7, time wastes:0.0298
+thresh=0.8, time wastes:0.1217
+thresh=0.9, time wastes:0.4718
 
 method 4:
 thresh=0.7, time wastes:0.0120
