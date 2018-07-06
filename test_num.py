@@ -1,6 +1,7 @@
 import numpy as np
 import time
-#from nms.nums_py2 import py_cpu_nms  # for cpu
+from nms.nums_py2 import py_cpu_nms  # for cpu
+from nms.cpu_nms import cpu_nms  # for cpu
 from nms.gpu_nms import gpu_nms   # for gpu 
 
 
@@ -20,9 +21,10 @@ def nms_test_time(boxes_new):
         since = time.time()
         for t in range(T):
 
-#            keep = py_cpu_nms(boxes_new, thresh=thresh[i])     # for cpu
-            keep = gpu_nms(boxes_new, thresh=thresh[i])         # for gpu
-        print("thresh={:.1f}, time wastes:{:.4f}".format(thresh[i], (time.time()-since)/T))
+       #     keep = py_cpu_nms(boxes_new, thresh=thresh[i])     # for cpu
+            #keep = cpu_nms(boxes_new, thresh=thresh[i])     # for cpu
+            keep = gpu_nms(boxes_new, thresh=thresh[2-i])         # for gpu
+        print("thresh={:.1f}, time wastes:{:.4f}".format(thresh[2-i], (time.time()-since)/T))
     
     return keep
 

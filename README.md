@@ -1,4 +1,4 @@
-# NMS
+# MTCNN Verison of NMS
 the comparison of nms in speed
 
 method 1:
